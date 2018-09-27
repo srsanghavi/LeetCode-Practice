@@ -1,5 +1,6 @@
 -- https://leetcode.com/problems/not-boring-movies/description/
 
+
 # Write your MySQL query statement below
 SELECT *
 FROM cinema
