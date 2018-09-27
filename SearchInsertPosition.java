@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/search-insert-position/description/
 
+
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int i;
