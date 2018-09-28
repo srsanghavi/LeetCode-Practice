@@ -1,15 +1,15 @@
-// https://leetcode.com/problems/min-cost-climbing-stairs/description/
+// https://leetcode.com/problems/climbing-stairs/description/
 
 class Solution {
-    public int minCostClimbingStairs(int[] cost) {
-        if(cost.length == 0) return 0;
-        if(cost.length == 1) return cost[0];
-        int[] d = new int[cost.length];
-        d[0] = cost[0];
-        d[1] = Math.min(cost[0]+cost[1],cost[1]);
-        for(int i=2;i<cost.length;i++){
-            d[i] = Math.min(d[i-2]+cost[i],d[i-1]+cost[i]);
+    public int climbStairs(int n) {
+        if(n==0) return 1;
+        if(n==1) return 1;
+        int[] d = new int[n+1];
+        d[0] = 1;
+        d[1] = 1;
+        for(int i=2;i<=n;i++){
+            d[i] = d[i-1]+d[i-2];
         }
-        return Math.min(d[cost.length-1],d[cost.length-2]);
+        return d[n];
     }
 }
